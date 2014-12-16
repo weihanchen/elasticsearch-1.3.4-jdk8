@@ -21,12 +21,13 @@ docker run -d -p 9200:9200 -p 9300:9300 weihanchen/elasticsearch-1.3.4-jdk8
 - Create a mountable data directory on the host.
 - Create ElasticSearch config file at <data-dir>/elasticsearch.yml.
 ```sh
-/data
-/data/elasticsearch.yml
+/data/data
+/data/config/elasticsearch.yml//your elasticsearch setting
+/data/logs
 ```
 - Start a Container
 ```sh
-docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data weihanchen/elasticsearch-1.3.4-jdk8:river /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
+docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data weihanchen/elasticsearch-1.3.4-jdk8:river /elasticsearch/bin/elasticsearch -Des.config=/data/config/elasticsearch.yml
 ```
   [1]: http://www.elasticsearch.org/
   [2]: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
