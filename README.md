@@ -11,7 +11,7 @@ docker build -t="test/elasticsearch:river" (Dockerfile's filepath)
 ```
 - pull this image
 ```sh
-docker pull weihanchen/elasticsearch-1.3.4-jdk8
+docker pull weihanchen/elasticsearch-1.3.4-jdk8:river
 ```
 ###Usage
 ```sh
@@ -26,7 +26,7 @@ docker run -d -p 9200:9200 -p 9300:9300 weihanchen/elasticsearch-1.3.4-jdk8
 ```
 - Start a Container
 ```sh
-docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data dockerfile/elasticsearch /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
+docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data weihanchen/elasticsearch-1.3.4-jdk8:river /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
 ```
   [1]: http://www.elasticsearch.org/
   [2]: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
