@@ -6,8 +6,8 @@
 # Pull base image.
 FROM ubuntu
 
-ENV ES_PKG_NAME elasticsearch-1.3.4
-ENV RIVER_VERSION 1.3.4.4
+ENV ES_PKG_NAME elasticsearch-1.4.0
+ENV RIVER_VERSION 1.4.0.8
 # Install ElasticSearch.
      RUN \
      apt-get update && \
